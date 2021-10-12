@@ -10,8 +10,8 @@ public interface RandomNumber {
     int showNumber();
 
 }
- class RandomNumberFinder implements RandomNumber{
-    @Override
+ class RandomNumberFinder {
+
     public int showNumber() {
         // creating an object of Random class
         Random random = new Random();
@@ -22,8 +22,8 @@ public interface RandomNumber {
 
     }
 }
- class InputInteger implements RandomNumber{
-    @Override
+ class InputInteger {
+
     public int showNumber() {
         Scanner scanner=new Scanner(System.in);
         System.out.println("enter input number");
@@ -33,11 +33,14 @@ public interface RandomNumber {
 
     }
 }
- class FactoryCheakNumber {
+ class FactoryCheakNumber implements RandomNumber {
 
-     RandomNumberFinder randomNumberFinder = new RandomNumberFinder();
-     InputInteger inputInteger = new InputInteger();
-     FileHandle fileHandle=new FileHandle();
+
+
+
+    private RandomNumberFinder randomNumberFinder = new RandomNumberFinder();
+   private   InputInteger inputInteger = new InputInteger();
+    private FileHandle fileHandle=new FileHandle();
 
      public int showNumber() {
 
@@ -83,7 +86,7 @@ public interface RandomNumber {
 
      }
      public void writeFile(int num){
-         //int number=factoryCheakNumber.showNumber();
+
 
          try {
              FileWriter myWriter = new FileWriter("filename.txt");

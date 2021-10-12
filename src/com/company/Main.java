@@ -8,8 +8,9 @@ public class Main {
     public static void main(String[] args) {
 
 
-        FactoryCheakNumber factoryCheakNumber=new FactoryCheakNumber();
-        factoryCheakNumber.showNumber();
+
+        RandomNumber rn =new FactoryCheakNumber();
+        rn.showNumber();
 
 
 
